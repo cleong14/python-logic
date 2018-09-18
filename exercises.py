@@ -1,5 +1,5 @@
 #Logic 
-
+print('PYTHON LOGIC')
 #Conditional statements gives us the ability to check conditions and make decisions based on the condition.
 
 #In this assignment, you'll be asked to create conditional statements using if, elif and else. 
@@ -7,17 +7,42 @@
 # Please commit and push your code after each completed exercise.
 
 #1. Declare a variable named weather and assign it a string value of 'rain'. Next create a conditional statement that will check the weather and print 'Bring an umbrella' if weather equals 'rain'.
+weather = 'rain'
+if(weather == 'rain'):
+  print('Bring an umbrella')
 
 #2 Declare a variable named score and assign it a number value of 70. Next create a conditional statement that will check the score and print 'You pass!' if the score is 70 and above and print 'Study harder!' if the score is less than 70.
+score = 70
+if(score >= 70):
+  print('you pass')
+else:
+  print('study harder')
 
 #3. Declare a variable named download_speed and assign it a data value of 50. Next create a conditional statement that will check the download speed and print the following based on the condition:
+download_speed = 101
+if(download_speed <= 50):
+  print('basic package')
+elif download_speed <= 100:
+  print('premium package')
+else:
+  print('platinum package')
 
 # <= 50: 'Basic Package'
 # <=100: 'Premium Package'
 # >100: 'Platinum Package'
 
- #4 Function - check_password
- #Create a function named check_password which takes a parameter password.
+#4 Function - check_password
+#Create a function named check_password which takes a parameter password.
+def check_password(password):
+  password_result = ''
+  if password == 'qwerty':
+    password_result = password
+    print(password_result)
+    return True
+  else:
+    return False
+    
+check_password('qwerty')
 
  #The function will return true if the password passed into the function is equal to 'qwerty'. Declare a variable named password_result and print your result.
 
@@ -38,6 +63,14 @@
 #Create a function named encryption which takes a parameter keys.
 
 #The function will print 'Encryption Success' if the keys passed into function has 5 characters and print 'Encryption Fail' if it doesn't.
+
+def encryption(keys):
+  if len(keys) == 5:
+    print('encryption success')
+  else:
+    print('encryption fail')
+
+encryption('1234')
 
 #8 Function even_cryptography
 #Create a function named even_cryptography which takes a parameter num.
